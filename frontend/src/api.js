@@ -1,8 +1,8 @@
 
-const BASE_URL='http://localhost:8080'
+const API_URL='https://employee-management-deploy-api.vercel.app'
 
 export const GetAllEmployee=async(search='',page=1,limit=5)=>{
-    const url=`${BASE_URL}/api/employees?search=${search}&page=${page}&limit=${limit}`
+    const url=`${API_URL}/api/employees?search=${search}&page=${page}&limit=${limit}`
     try {
         const options={
             method:'GET',
@@ -20,7 +20,7 @@ export const GetAllEmployee=async(search='',page=1,limit=5)=>{
 }
 
 export const createEmployee=async(empObj)=>{
-    const url=`${BASE_URL}/api/employees`
+    const url=`${API_URL}/api/employees`
     try {
         const formData=new FormData()
 
@@ -44,7 +44,7 @@ export const createEmployee=async(empObj)=>{
 }
 
 export const deleteEmployee = async (employeeId) => {
-    const url = `${BASE_URL}/api/employees/${employeeId}`;
+    const url = `${API_URL}/api/employees/${employeeId}`;
     try {
         const options = {
             method: 'DELETE',
@@ -63,7 +63,7 @@ export const deleteEmployee = async (employeeId) => {
 
 
 export const updateEmployee = async (employeeId, empObj) => {
-    const url = `${BASE_URL}/api/employees/${employeeId}`;
+    const url = `${API_URL}/api/employees/${employeeId}`;
     try {
         const options = {
             method: 'PUT',
@@ -82,7 +82,7 @@ export const updateEmployee = async (employeeId, empObj) => {
 };
 
 export const GetEmployeeById = async (employeeId) => {
-    const url = `${BASE_URL}/api/employees/${employeeId}`;
+    const url = `${API_URL}/api/employees/${employeeId}`;
     try {
         const options = {
             method: 'GET',
