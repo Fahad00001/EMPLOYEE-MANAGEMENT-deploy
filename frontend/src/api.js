@@ -1,5 +1,5 @@
 
-const API_URL='https://employee-management-deploy-api1.vercel.app/'
+const API_URL='https://employee-management-deploy-api1.vercel.app'
 
 export const GetAllEmployee=async(search='',page=1,limit=5)=>{
     const url=`${API_URL}/api/employees?search=${search}&page=${page}&limit=${limit}`
