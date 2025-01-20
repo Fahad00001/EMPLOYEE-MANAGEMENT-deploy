@@ -1,5 +1,5 @@
 
-const API_URL='https://mern-task-manager-app-deploy-api10.vercel.app'
+const API_URL='http://localhost:8080'
 
 export const GetAllEmployee=async(search='',page=1,limit=5)=>{
     const url=`${API_URL}/api/employees?search=${search}&page=${page}&limit=${limit}`
